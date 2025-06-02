@@ -72,11 +72,3 @@ A aplicação **SauceDemo** não possui autenticação com persistência real no
 🧠 **Decisão técnica**: optou-se por realizar o login pela interface em cada cenário, garantindo maior confiabilidade e aderência ao comportamento real da aplicação.
 
 ---
-
-## ▶️ Como Executar os Testes
-
-1. **Clonar o repositório:**
-
-```bash
-git clone https://github.com/seu-usuario/quality-assured-Saucedemo.git
-cd quality-assured-Saucedemo
