@@ -61,6 +61,10 @@ Este projeto tem como objetivo simular o processo de garantia de qualidade (QA) 
 - [product-details.cy.js.mp4](./evidencias/automatizados/features/product-details.cy.js.mp4)
 - [e2e-test.cy.js.mp4](./evidencias/automatizados/e2e-test.cy.js.mp4)
 
+## ✅ All specs passed!
+
+(./evidencias/automatizados/Successfully-run-all-test.png)
+
 ---
 
 ## 🚫 Por que **não** utilizei cy.session()?
