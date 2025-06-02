@@ -52,11 +52,22 @@ Este projeto tem como objetivo simular o processo de garantia de qualidade (QA) 
 
 ---
 
-## 🚫 Por que **não** utilizei `cy.session()`?
+## 🎥 Evidências em Vídeo dos Testes Automatizados
+
+- [add-product-to-cart.cy.js.mp4](./evidencias/automatizados/features/add-product-to-cart.cy.js.mp4)
+- [checkout-product.cy.js.mp4](./evidencias/automatizados/features/checkout-product.cy.js.mp4)
+- [login.cy.js.mp4](./evidencias/automatizados/features/login.cy.js.mp4)
+- [logout.cy.js.mp4](./evidencias/automatizados/features/logout.cy.js.mp4)
+- [product-details.cy.js.mp4](./evidencias/automatizados/features/product-details.cy.js.mp4)
+- [e2e-test.cy.js.mp4](./evidencias/automatizados/e2e-test.cy.js.mp4)
+
+---
+
+## 🚫 Por que **não** utilizei cy.session()?
 
 ### 🔒 Limitação no Compartilhamento de Sessões com Cypress no Projeto Saucedemo
 
-A aplicação **SauceDemo** não possui autenticação com persistência real no backend (sem API pública e sem uso de tokens). Como a sessão é gerenciada exclusivamente pela interface (UI), tentativas de reaproveitamento de sessão com `cy.session()` resultam em redirecionamentos indesejados ou falhas.
+A aplicação **SauceDemo** não possui autenticação com persistência real no backend (sem API pública e sem uso de tokens). Como a sessão é gerenciada exclusivamente pela interface (UI), tentativas de reaproveitamento de sessão com cy.session() resultam em redirecionamentos indesejados ou falhas.
 
 🧠 **Decisão técnica**: optou-se por realizar o login pela interface em cada cenário, garantindo maior confiabilidade e aderência ao comportamento real da aplicação.
 
@@ -65,25 +76,7 @@ A aplicação **SauceDemo** não possui autenticação com persistência real no
 ## ▶️ Como Executar os Testes
 
 1. **Clonar o repositório:**
-   ```bash
-   git clone https://github.com/seu-usuario/quality-assured-Saucedemo.git
-   cd quality-assured-Saucedemo
 
----
-
-📎 Evidências de Testes Automatizados
-📂 Abaixo estão os vídeos gerados automaticamente pelo Cypress durante a execução dos testes. Eles mostram em tempo real o comportamento validado pela automação.
-
-🧩 Funcionalidades
-📹 Login
-
-📹 Logout
-
-📹 Visualização de Detalhes do Produto
-
-📹 Adicionar Produto ao Carrinho
-
-📹 Checkout de Produto
-
-🔁 Teste End-to-End
-📹 Fluxo Completo de Compra (E2E)
+```bash
+git clone https://github.com/seu-usuario/quality-assured-Saucedemo.git
+cd quality-assured-Saucedemo
