@@ -7,5 +7,10 @@
   },
   "dependencies": {
     "@faker-js/faker": "^9.8.0"
+  },
+  "scripts": {
+    "test": "cypress run",
+    "test:headed": "cypress run --headed --browser chrome",
+    "test:open": "cypress open"
   }
 }

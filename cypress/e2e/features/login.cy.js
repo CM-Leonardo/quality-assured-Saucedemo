@@ -1,22 +1,23 @@
-describe('Validando ação de login', () => {
-    const options = { cacheSession: false} //Definindo que o cache não será reaproveitado
+describe('Login Feature', () => {
 
-    context('Executando login com credenciais validas', () => {
-        it('Succesfully', () => {
+    context('When using valid credentials', () => {
+        it('should login successfully', () => {
             cy.login()
 
-            //validação se o login foi feito com sucesso
+            // Valida se foi direcionado para a página de inventário
             cy.url().should('be.equal', `${Cypress.config('baseUrl')}inventory.html`)
         })
     })
 
-    context('Executando login com credenciais invalidas, sistema deve barrar a entrada', () => {
-        it('Successfully', () => {
-            
+    context('When using invalid credentials', () => {
+        it('should block login and show error message', () => {
+            // Executa login com usuário e senha inválidos
             cy.login('user_error', 'password_error')
 
-            //validação se o sistema barrou o login
-            cy.get('[data-test="error"]').should('contain.text', 'Epic sadface: Username and password do not match any user in this service')
+            // Valida se exibe a mensagem de erro corretamente
+            cy.get('[data-test="error"]')
+                .should('contain.text', 'Epic sadface: Username and password do not match any user in this service')
         })
     })
+
 })

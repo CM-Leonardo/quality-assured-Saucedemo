@@ -7,5 +7,6 @@ export default defineConfig({
     experimentalRunAllSpecs: true,
   },
   fixturesFolder: false,
-  video: false,
+  videosFolder: 'cypress/video',
+  video: true
 })

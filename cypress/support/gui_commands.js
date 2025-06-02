@@ -11,7 +11,6 @@ Cypress.Commands.add('login', (
 })
 
 Cypress.Commands.add('resetAppStates', () => {
-    //Reseta o estado do carrinho
     cy.get('#react-burger-menu-btn').click()
     cy.get('a[data-test=\'reset-sidebar-link\']').click()
     cy.get('#react-burger-cross-btn').click()
@@ -25,7 +24,7 @@ Cypress.Commands.add('saveTextAsAlias', (selector, aliasName) => {
         })
 })
 
-Cypress.Commands.add('saveConstainsTextAsAlias', (selector, containsText, aliasName) => {
+Cypress.Commands.add('saveContainsTextAsAlias', (selector, containsText, aliasName) => {
     cy.get(selector)
         .contains(containsText)
         .invoke('text')
@@ -34,7 +33,7 @@ Cypress.Commands.add('saveConstainsTextAsAlias', (selector, containsText, aliasN
         })
 })
 
-Cypress.Commands.add('validadeInfo', (nameAlias, selector) => {
+Cypress.Commands.add('validateInfo', (nameAlias, selector) => {
     cy.get(nameAlias).then((value) => {
         cy.get(selector)
             .should('have.text', value.trim())

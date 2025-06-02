@@ -1,50 +1,53 @@
-describe('Adicionando produtos no carrinho', () => {
+describe('Adding products to the cart', () => {
     beforeEach(() => {
         cy.login()
         cy.resetAppStates()
     })
-    
-    context('Adicionando produto no carrinho pela lista de produtos', () => {
-        it('Successfully', () => {
 
-            // Captura nome e preço
-            cy.saveTextAsAlias('a[data-test=\'item-1-title-link\'] div[data-test=\'inventory-item-name\']', 'nameProduct')
-            cy.saveConstainsTextAsAlias('[data-test="inventory-item-price"]','$15.99', 'priceProduct')
+    context('Adding a product from the product list', () => {
+        it('Should add the product and validate information in the cart', () => {
 
-            // Adiciona ao carrinho
+            // Capture name and price for validation
+            cy.saveTextAsAlias('a[data-test="item-1-title-link"] div[data-test="inventory-item-name"]', 'nameProduct')
+            cy.saveContainsTextAsAlias('[data-test="inventory-item-price"]', '$15.99', 'priceProduct')
+
+            // Add product to cart
             cy.get('button[data-test="add-to-cart-sauce-labs-bolt-t-shirt"]').click()
 
-            // Acessa o carrinho
+            // Go to cart page
             cy.get('a[data-test="shopping-cart-link"]').click()
-            
-            //Validando informações do produto
-            cy.validadeInfo('@nameProduct', 'div[data-test="inventory-item-name"]')
-            cy.validadeInfo('@priceProduct', 'div[data-test="inventory-item-price"]')
 
-            // Valida badge do carrinho
+            // Validate product name and price
+            cy.validateInfo('@nameProduct', 'div[data-test="inventory-item-name"]')
+            cy.validateInfo('@priceProduct', 'div[data-test="inventory-item-price"]')
+
+            // Validate cart badge quantity
             cy.get('span.shopping_cart_badge')
                 .should('have.text', '1')
         })
     })
 
-    
-    
-    context('Adicionando produto no carrinho pelo detalhe do produto', () => {
-        it('Successfully', () => {
-            
-            cy.get('a[data-test=\'item-1-title-link\'] div[data-test=\'inventory-item-name\']').click()
-            
-            cy.saveTextAsAlias('div[data-test=\'inventory-item-name\']', 'nameProduct')
-            cy.saveTextAsAlias('div[data-test=\'inventory-item-price\']', 'priceProduct')
-            
-            cy.get('button[data-test=\'add-to-cart\']').click()
+    context('Adding a product from the product detail page', () => {
+        it('Should add the product from detail and validate information in the cart', () => {
+
+            // Access product detail page
+            cy.get('a[data-test="item-1-title-link"] div[data-test="inventory-item-name"]').click()
+
+            // Capture name and price for validation
+            cy.saveTextAsAlias('div[data-test="inventory-item-name"]', 'nameProduct')
+            cy.saveTextAsAlias('div[data-test="inventory-item-price"]', 'priceProduct')
+
+            // Add product to cart
+            cy.get('button[data-test="add-to-cart"]').click()
+
+            // Go to cart page
             cy.get('a[data-test="shopping-cart-link"]').click()
 
-            //Validando informações do produto
-            cy.validadeInfo('@nameProduct', 'div[data-test="inventory-item-name"]')
-            cy.validadeInfo('@priceProduct', 'div[data-test="inventory-item-price"]')
+            // Validate product name and price
+            cy.validateInfo('@nameProduct', 'div[data-test="inventory-item-name"]')
+            cy.validateInfo('@priceProduct', 'div[data-test="inventory-item-price"]')
 
-            // Valida badge do carrinho
+            // Validate cart badge quantity
             cy.get('span.shopping_cart_badge')
                 .should('have.text', '1')
         })
