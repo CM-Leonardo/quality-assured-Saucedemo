@@ -68,3 +68,22 @@ A aplicação **SauceDemo** não possui autenticação com persistência real no
    ```bash
    git clone https://github.com/seu-usuario/quality-assured-Saucedemo.git
    cd quality-assured-Saucedemo
+
+---
+
+📎 Evidências de Testes Automatizados
+📂 Abaixo estão os vídeos gerados automaticamente pelo Cypress durante a execução dos testes. Eles mostram em tempo real o comportamento validado pela automação.
+
+🧩 Funcionalidades
+📹 Login
+
+📹 Logout
+
+📹 Visualização de Detalhes do Produto
+
+📹 Adicionar Produto ao Carrinho
+
+📹 Checkout de Produto
+
+🔁 Teste End-to-End
+📹 Fluxo Completo de Compra (E2E)
