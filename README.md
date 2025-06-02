@@ -31,7 +31,7 @@ Este projeto tem como objetivo simular o processo de garantia de qualidade (QA) 
 ## 🧪 Estrutura dos Testes
 
 ### 📁 Documentação Manual
-- [Test Plan - Saucedemo.pdf](.evidencias/manual/TestPlanSaucedemo.pdf)
+- [Test Plan - Saucedemo.pdf](.evidencias/manual/Test Case - Saucedemo.pdf)
 - [Test Case - Saucedemo.pdf](./evidencias/manual/Test%20Case%20-%20Saucedemo.pdf)
 
 > Estes documentos descrevem os critérios de teste, escopo, funcionalidades a serem validadas, dados de entrada, pré-condições, passos e resultados esperados.
