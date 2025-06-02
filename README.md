@@ -23,7 +23,7 @@ Este projeto tem como objetivo simular o processo de garantia de qualidade (QA) 
 - **Cypress**: Ferramenta de testes End-to-End
 - **JavaScript (ES6+)**
 - **faker.js**: Gerador de dados fictícios para simular usuários e entradas variadas
-- **Aqua IDE- JetBrains** para desenvolvimento
+- **Aqua IDE - JetBrains** para desenvolvimento
 - **GitHub** para versionamento e documentação
 
 ---
