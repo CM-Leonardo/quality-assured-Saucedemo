@@ -63,7 +63,7 @@ Este projeto tem como objetivo simular o processo de garantia de qualidade (QA) 
 
 ## ✅ All specs passed!
 
-(./evidencias/automatizados/Successfully-run-all-test.png)
+![All specs](./evidencias/automatizados/Successfully-run-all-test.png)
 
 ---
 
